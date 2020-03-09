@@ -33,7 +33,7 @@ public class VulkanizerskaRadnja {
 	 */
 	public LinkedList<AutoGuma> pronadjiGumu(String markaModel) {
 		if (markaModel == null)
-			return null;
+			throw new NullPointerException("Marka modela ne moze biti null");
 		LinkedList<AutoGuma> novaLista = new LinkedList<AutoGuma>();
 		for (int i = 0; i < gume.size(); i++)
 			if (gume.get(i).equals(markaModel))
